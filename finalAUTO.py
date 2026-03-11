@@ -12,8 +12,6 @@ client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 URL = "https://www.amazon.in/ref=nav_logo"
 REQ_FILE = "requirements.docx"
 
-
-# ====== STEP 1: Extract text from document ======
 def extract_text(file_path):
     """Extract text from .docx or .pdf"""
     if file_path.endswith(".docx"):
@@ -127,3 +125,4 @@ if __name__ == "__main__":
 
     print(" Running test cases on:", URL)
     run_testcases(test_cases, URL)
+
